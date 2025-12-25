@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Телекоммуникационная компания</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="site">
+        <!-- Экран входа -->
+        <div id="login-screen" class="screen active">
+            <div class="card">
+                <h1>Добро пожаловать!</h1>
+                <p>Выберите режим работы</p>
+                <button onclick="enterAs('admin')">Войти как администратор</button>
+                <button onclick="enterAs('user')">Войти как абонент</button>
+            </div>
+        </div>
+
+        <!-- Главное меню -->
+        <div id="main-screen" class="screen">
+            <header>
+                <h1>Телекоммуникационная компания</h1>
+                <div>Режим: <span id="role-text"></span> | <button onclick="logout()">Выйти</button></div>
+            </header>
+
+            <nav class="menu">
+                <button onclick="showSection('subscribers')">Абоненты</button>
+                <button onclick="showSection('tariffs')">Тарифы</button>
+                <button onclick="showSection('cities')">Города</button>
+                <button onclick="showSection('payment-methods')">Способы оплаты</button>
+                <button onclick="showSection('services')">Услуги</button>
+                <button onclick="showSection('calls')">Звонки</button>
+                <button onclick="showSection('internet')">Интернет-сессии</button>
+                <button onclick="showSection('sms')">СМС</button>
+                <button onclick="showSection('payments')">Платежи</button>
+                <button onclick="showSection('reports')">Отчёты</button>
+                <button onclick="showSection('search')">Поиск абонентов</button>
+            </nav>
+
+            <div id="content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
